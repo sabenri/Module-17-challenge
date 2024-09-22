@@ -11,7 +11,6 @@ The regex pattern we will break down in this tutorial is:
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
@@ -37,9 +36,20 @@ The {8,} quantifer specifies that the preceding character class must occur at le
 
 EXAMPLES:
 Matches: Password1!,AbCdE123!
-Doesn't Match:Sab1!
+Doesn't Match: Sab1!
 
 ### Character Classes
+The character class [A-Za-z\d@$!%*?&] defines what characters are allowed in the password.
+
+A-Za-Z: Is used to match uppercase and lowercase letters.
+/d: Is used to match any single digit.
+@$!%*?&: Is used to match the specitfied special character.
+
+This makes sure the password can only have letters, digits, and specified special characters.
+
+EXAMPLES:
+Matches: Password1!,AbCdE123!
+Doesn't Match: Sab/enri1 
 
 ### Flags
 
