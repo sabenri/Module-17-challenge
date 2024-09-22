@@ -24,10 +24,20 @@ The regex pattern we will break down in this tutorial is:
 ## Regex Components
 
 ### Anchors
+The regex begins with ^ and ends with $. these are known as anchors:
+
+The ^ anchor is used to assert the position at the start of a string
+
+The $ anchor is used to assert the position at the end of a string
 
 ### Quantifiers
+The {8,} quantifer specifies that the preceding character class must occur at least 8 times 
 
-### OR Operator
+{8,}: this makes sure that the password has at least 8 characters.
+
+EXAMPLES:
+Matches: Password1!,AbCdE123!
+Doesn't Match:Sab1!
 
 ### Character Classes
 
