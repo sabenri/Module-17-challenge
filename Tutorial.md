@@ -12,8 +12,7 @@ The regex pattern we will break down in this tutorial is:
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
+- [Flags](#flags) 
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
@@ -63,17 +62,42 @@ i(ignore case):makes so the pattern is case-insensitive.
 m(multiline): Treats beginning ^ and ending $ anchors as working across multiple lines in the input string.
 g(global search): maskes it so it searches for all matches in the input string, not just the first.
 
-### Grouping and Capturing
-
 ### Bracket Expressions
+Barcket expressions are used to define a set of characters for matching. They can support character ranges, negation and can be used with other elements of regex for more flexible and powerful pattern matching. 
 
-### Greedy and Lazy Match
+(?=.*[a-z]): Makes it so that there needs to be at least one lowercase letter.
+(?=.*[A-Z]): Makes it so that there needs to be at least one uppercase letter.
+(?=.*\d): Makes it so that there needs to be at least one digit.
+(?=.*[@#$%&]): Makes it so that there needs to be at least one special character.
+[A-Za-z\d@#$%&]{8,}: The allowed characters, repeated at least 8 times.
+
+EXAMPLES 
+Matches: Password1!,AbCdE123!
+Doesn't Match: password, sab123
 
 ### Boundaries
+Boundaries are used for defining specific locations where patterns should be matching. The differnt type of boundaries are word line boundaries and string boundaries. This is used for creating more precise and controlled regex patterns. 
 
-### Back-references
+ word boundaries (\b, \B).
+  line boundaries (^, $)  
+  string boundaries (\A, \Z, \z)
 
 ### Look-ahead and Look-behind
+Positive Lookahead is used to assert that a pattern exists ahead in the string without consuming characters. The format is (?=...).
+
+(?=.*[a-z]): Makes it so that there needs to be at least one lowercase letter.
+(?=.*[A-Z]): Makes it so that there needs to be at least one uppercase letter.
+(?=.*\d): Makes it so that there needs to be at least one digit.
+(?=.*[@#$%&]): Makes it so that there needs to be at least one special character.
+[A-Za-z\d@#$%&]{8,}: The allowed characters, repeated at least 8 times.
+
+
+EXAMPLES 
+Matches: a, A, 1, !
+Doesn't Match: (empty string)
 
 ## Author
+
+Hi! I’m Sabely Enriquez, a web development student, I wrote this tutoriol to sharing knowledge about password validation using Regex. 
+You can find more of my projects and tutorials on my GitHub profile : [sabenri](https://github.com/sabenri)
 
