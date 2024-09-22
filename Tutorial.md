@@ -29,6 +29,10 @@ The ^ anchor is used to assert the position at the start of a string
 
 The $ anchor is used to assert the position at the end of a string
 
+EXAMPLES
+Matches: Password123!
+Doesn't Match:  Password123!(extra space makes if fail)
+
 ### Quantifiers
 The {8,} quantifer specifies that the preceding character class must occur at least 8 times 
 
@@ -52,6 +56,12 @@ Matches: Password1!,AbCdE123!
 Doesn't Match: Sab/enri1 
 
 ### Flags
+Flags are optional. The are modifiers that change how the pattern is read. They can control things like case sensitivity, multiline matching and globle search.
+
+EXAMPLES
+i(ignore case):makes so the pattern is case-insensitive.
+m(multiline): Treats beginning ^ and ending $ anchors as working across multiple lines in the input string.
+g(global search): maskes it so it searches for all matches in the input string, not just the first.
 
 ### Grouping and Capturing
 
